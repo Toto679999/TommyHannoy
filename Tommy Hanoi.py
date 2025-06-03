@@ -95,7 +95,7 @@ def parse_log(path):
                 val = parts[2] if len(parts) >= 3 else ''
                 events.append((ts, etype, val))
     if not events:
-        print("No events.")
+        print("Aucun évènement.")
         return
     df = pd.DataFrame(events, columns=['ts', 'etype', 'val'])
     df.set_index(pd.to_datetime(df.ts), inplace=True)
